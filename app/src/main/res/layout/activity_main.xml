@@ -6,30 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2"  />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="紅綠燈(作者：靜宜大學海青班－數媒科－洪孳紳)"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gl1" />
-
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
-
     <Button
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
@@ -38,9 +14,9 @@
         android:text="開始遊戲"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/gl2"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnEnd"
-        app:layout_constraintHorizontal_chainStyle="packed"/>
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnEnd"
@@ -52,5 +28,68 @@
         app:layout_constraintBottom_toTopOf="@+id/gl2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnStart" />
+
+
+    <EditText
+        android:id="@+id/紅燈秒數"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:inputType="textPersonName"
+        android:text="紅燈秒數"
+        app:layout_constraintBottom_toTopOf="@+id/gl3"
+        app:layout_constraintEnd_toStartOf="@+id/黃燈秒數"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/黃燈秒數"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:inputType="textPersonName"
+        android:text="黃燈秒數"
+        app:layout_constraintBottom_toTopOf="@+id/gl3"
+        app:layout_constraintEnd_toStartOf="@id/綠燈秒數"
+        app:layout_constraintStart_toEndOf="@id/紅燈秒數" />
+
+    <EditText
+        android:id="@+id/綠燈秒數"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:inputType="textPersonName"
+        android:text="綠燈秒數"
+        app:layout_constraintBottom_toTopOf="@+id/gl3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/黃燈秒數" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="紅綠燈(作者：靜宜大學海青班－數媒科－洪孳紳)"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
