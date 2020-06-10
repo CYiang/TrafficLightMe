@@ -34,20 +34,19 @@
         android:id="@+id/紅燈秒數"
         android:layout_width="100dp"
         android:layout_height="45dp"
+        android:hint="紅燈秒數"
         android:inputType="textPersonName"
-        android:text="紅燈秒數"
         app:layout_constraintBottom_toTopOf="@+id/gl3"
         app:layout_constraintEnd_toStartOf="@+id/黃燈秒數"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_chainStyle="packed" />
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/黃燈秒數"
         android:layout_width="100dp"
         android:layout_height="45dp"
+        android:hint="黃燈秒數"
         android:inputType="textPersonName"
-        android:text="黃燈秒數"
         app:layout_constraintBottom_toTopOf="@+id/gl3"
         app:layout_constraintEnd_toStartOf="@id/綠燈秒數"
         app:layout_constraintStart_toEndOf="@id/紅燈秒數" />
@@ -56,8 +55,8 @@
         android:id="@+id/綠燈秒數"
         android:layout_width="100dp"
         android:layout_height="45dp"
+        android:hint="綠燈秒數"
         android:inputType="textPersonName"
-        android:text="綠燈秒數"
         app:layout_constraintBottom_toTopOf="@+id/gl3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/黃燈秒數" />
@@ -90,6 +89,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_begin="226dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
